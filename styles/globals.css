@@ -1,3 +1,7 @@
-h1 {
-  color: red;
+html {
+  background: url("/static/mesh-gradient.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+  color: indigo;
 }
