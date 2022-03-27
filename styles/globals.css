@@ -5,3 +5,14 @@ html {
   height: 100%;
   color: indigo;
 }
+
+.card-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.card {
+  justify-content: center;
+}
