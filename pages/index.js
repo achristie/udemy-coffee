@@ -2,12 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "../components/banner";
 import Card from "../components/card";
-import coffeeStores from "../data/coffee-stores.json";
+import data from "../data/coffee-stores.json";
 
 export async function getStaticProps(context) {
   return {
     props: {
-      coffeeStores,
+      coffeeStores: data,
     },
   };
 }
@@ -21,6 +21,7 @@ export default function Home({ coffeeStores }) {
         <title>AWC</title>
       </Head>
       <Image src="/static/hero.png" width={196} height={196} />
+      {coffeeStores.length > 0 && <h2>Toronto Stores</h2>}
       <div className="card-layout">
         {coffeeStores?.map((cs) => {
           return (
